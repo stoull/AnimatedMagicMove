@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CsZ-Rk-ciX">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Collection View Controller-->
+        <scene sceneID="QWR-Py-E8g">
+            <objects>
+                <collectionViewController id="a6Y-E6-267" customClass="MainCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xes-U1-O1e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.92030914690977672" green="0.96217355309153307" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ije-DR-nqB">
+                            <size key="itemSize" width="160" height="220"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="15" minY="10" maxX="15" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="roO-d9-JtL" customClass="CollectionViewCell">
+                                <rect key="frame" x="15" y="74" width="160" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="220"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earthBig" translatesAutoresizingMaskIntoConstraints="NO" id="wt1-0E-fKf">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="180"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="180" id="31w-KN-Ciw"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地球（英语：Earth）是太阳系八大行星之一" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhS-PG-udf">
+                                            <rect key="frame" x="13" y="182" width="134" height="38"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="zhS-PG-udf" firstAttribute="top" secondItem="wt1-0E-fKf" secondAttribute="bottom" constant="2" id="0tA-gz-slM"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="wt1-0E-fKf" secondAttribute="trailing" constant="-8" id="7EM-uR-fhT"/>
+                                    <constraint firstItem="zhS-PG-udf" firstAttribute="leading" secondItem="roO-d9-JtL" secondAttribute="leadingMargin" constant="5" id="Eav-eH-ru4"/>
+                                    <constraint firstItem="wt1-0E-fKf" firstAttribute="leading" secondItem="roO-d9-JtL" secondAttribute="leadingMargin" constant="-8" id="G3s-sQ-ax9"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="zhS-PG-udf" secondAttribute="trailing" constant="5" id="ia5-JZ-6Co"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="zhS-PG-udf" secondAttribute="bottom" constant="-8" id="uC3-9c-dKs"/>
+                                    <constraint firstItem="wt1-0E-fKf" firstAttribute="top" secondItem="roO-d9-JtL" secondAttribute="topMargin" constant="-8" id="vn8-HL-GGL"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="detailTextView" destination="zhS-PG-udf" id="wqB-LX-s91"/>
+                                    <outlet property="imageView" destination="wt1-0E-fKf" id="wlz-VQ-OrO"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="a6Y-E6-267" id="Yhg-BV-64h"/>
+                            <outlet property="delegate" destination="a6Y-E6-267" id="w1i-Sc-qn5"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="lan-I7-wsN"/>
+                    <connections>
+                        <segue destination="vSP-f6-kka" kind="show" identifier="hahaha" id="D7A-py-t3I"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umv-1m-zWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178" y="375"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="arY-KT-yUP">
+            <objects>
+                <viewController id="vSP-f6-kka" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WsL-ju-nZU"/>
+                        <viewControllerLayoutGuide type="bottom" id="YDb-3N-djp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0SD-3d-AT6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earthBig" translatesAutoresizingMaskIntoConstraints="NO" id="8ca-Tu-aSp">
+                                <rect key="frame" x="150" y="76" width="300" height="340"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="6XA-rF-5fl"/>
+                                    <constraint firstAttribute="width" constant="300" id="txe-NP-uP8"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NcM-EA-lTR">
+                                <rect key="frame" x="150" y="424" width="300" height="150"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="OxQ-J5-nQE"/>
+                                    <constraint firstAttribute="width" constant="300" id="mo4-Op-dt1"/>
+                                </constraints>
+                                <mutableString key="text">地球（英语：Earth）是太阳系八大行星之一（2006年冥王星被划为矮行星，因为其运动轨迹与其它八大行星不同），按离太阳由近及远的次序排为第三颗。它有一个天然卫星——月球，二者组成一个天体系统——地月系统。地球作为一个行星，远在46亿年以前起源于原始太阳星云。地球会与外层空间的其他天体相互作用，包括太阳和月球。地球是上百万生物的家园，包括人类，地球是目前宇宙中已知存在生命的唯一天体。地球赤道半径6378.137千米，极半径6356.752千米，平均半径约6371千米，赤道周长大约为40076千米，地球上71%为海洋，29%为陆地，所以太空上看地球呈蓝色。地球是目前发现的星球中人类生存的唯一星球。</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8ca-Tu-aSp" firstAttribute="centerX" secondItem="0SD-3d-AT6" secondAttribute="centerX" id="7xe-dG-RAi"/>
+                            <constraint firstItem="8ca-Tu-aSp" firstAttribute="top" secondItem="WsL-ju-nZU" secondAttribute="bottom" constant="12" id="Hld-Es-9Gj"/>
+                            <constraint firstItem="NcM-EA-lTR" firstAttribute="top" secondItem="8ca-Tu-aSp" secondAttribute="bottom" constant="8" id="TYu-53-CF7"/>
+                            <constraint firstItem="NcM-EA-lTR" firstAttribute="centerX" secondItem="0SD-3d-AT6" secondAttribute="centerX" id="pXN-fT-Blm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailImageView" destination="8ca-Tu-aSp" id="JqE-as-l2t"/>
+                        <outlet property="textView" destination="NcM-EA-lTR" id="v0K-xu-aea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mxa-p6-uYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1943" y="375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WB4-tY-r2d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CsZ-Rk-ciX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DtN-zb-qQs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="a6Y-E6-267" kind="relationship" relationship="rootViewController" id="059-id-GdY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyj-dJ-A0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="earthBig" width="300" height="340"/>
+    </resources>
+</document>
